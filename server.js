@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/", routerUsuarios);
-app.use("/", routerUsuariosPrivate);
+app.use("/", auth, routerUsuariosPrivate);
 
 app.listen(3000, () => console.log("Servidor rodando com sucesso!"));
 
